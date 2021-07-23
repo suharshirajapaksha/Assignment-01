@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import CreatePatient from './components/CreatePatient';
+import ShowPatientList from './components/ShowPatientList';
+import ShowPatientDetails from './components/ShowPatientDetails';
+import UpdatePatientInfo from './components/UpdatePatientInfo';
+
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div>
+          <Route exact path='/' component={ShowPatientList} />
+          <Route path='/create-patient' component={CreatePatient} />
+          <Route path='/edit-patient/:id' component={UpdatePatientInfo} />
+          <Route path='/show-patient/:id' component={ShowPatientDetails} />
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
