@@ -20,7 +20,7 @@ class UpdatePatientInfo extends Component {
     axios
       .get('http://localhost:8082/api/Patient/'+this.props.match.params.id)
       .then(res => {
-        // this.setState({...this.state, book: res.data})
+        // this.setState({...this.state, patient: res.data})
         this.setState({
           Name: res.data.Name,
           Address: res.data.Address,

@@ -15,7 +15,7 @@ const PatientCard = (props) => {
                     </Link>
                 </h2>
                 <h3>{patient.Name}</h3>
-                <h3>{patient.Patient_Id}</h3>
+                <h3>{patient.PatientId}</h3>
                 <p>{patient.description}</p>
             </div>
         </div>
