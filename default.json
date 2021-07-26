@@ -1,0 +1,4 @@
+{
+    "mongoURI":
+    "mongodb+srv://suharshi:123@cluster0.vmain.mongodb.net/Patient?retryWrites=true&w=majority"
+  }
